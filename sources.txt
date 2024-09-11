@@ -1,0 +1,5 @@
+List of sources:
+https://www.w3schools.com/html/html_tables.asp Accessed 9/8/2024 at 8:44PM
+https://stackoverflow.com/questions/9067892/how-to-align-two-elements-on-the-same-line-without-changing-html Accessed 9/8/2024 at 9:06PM
+https://www.youtube.com/watch?v=Z4pCqK-V_Wo Accessed 9/8/2024 at 9:31PM
+https://www.w3schools.com/cssref/css3_pr_transform.php Accessed 9/10/2024 at 9:07PM

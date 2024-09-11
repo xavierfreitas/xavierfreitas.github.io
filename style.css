@@ -1,0 +1,109 @@
+/* Copyright Xavier Freitas 2024 */
+/* Main body color */
+body {
+    background-color:rgb(235, 235, 198);
+}
+
+/* Text color for all of the important text that I want to pop out */
+.important-text {
+    color:coral;
+}
+
+/* Specific styling and border I wanted to apply to my name */
+#my-name {
+    font-size: 40px;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    border: 5px solid coral;
+    margin: 4px;
+}
+
+/* Specific text font and size I wanted for my self intro */
+#self-intro {
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* default styling of tables in the file */
+table {
+    border: 2px solid black;
+    width: 30%;
+    height: 160px;
+    margin: 20px;
+}
+
+/* editing table rows/headers that are inside of #tab-one (the first table) */
+#tab-one tr, th{
+    border: 2px solid black;
+    text-align: left;
+}
+
+/* editing table cells that are inside of #tab-one */
+#tab-one td {
+    border: 2px solid black;
+    text-align: left;
+    color: grey;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+}
+
+/* setting the div to flex and "space-between" so that I could style how I wanted
+to spread out elements inside of the divs horizontally */
+div {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Custom button styling and text font */
+button {
+    height: 90px;
+    width: 90px;
+    background-color:rgba(255, 63, 63, 0.459);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border: 4px solid rgb(190, 2, 2);
+    
+}
+
+/* Cool "hover" pseudo-class to make button change color when hovered */
+button:hover {
+    background-color: rgba(51, 255, 0, 0.932);
+    transition: 1s ease-in-out all;
+    cursor: grab;
+}
+
+/* custom styling for the second table */
+#tab-two {
+    border: 1px solid black;
+    width: 20%;
+    height: 60px;
+}
+
+/* styling table rows/cells that are inside of #table-two */
+#tab-two tr, td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+/* default size that I want images to appear as */
+img {
+    height: 300px;
+}
+
+/* cool hover effect on the images so that they get slightly bigger to make 
+the site slightly more interactive */
+img:hover {
+    transform:scale(1.1, 1.1);
+    transition: 0.25s ease-in-out all;
+}
+
+/* styling all h5's inside of divs so they have that color */
+div h5 {
+    color: coral;
+
+}
+
+/* position re-adjustment for maine_sunset.jpg picture so that it looks nice */
+#this-pic {
+    right: 70px;
+}
