@@ -107,3 +107,7 @@ div h5 {
 #this-pic {
     right: 70px;
 }
+
+#unord-list {
+    font-style: italic;
+}
