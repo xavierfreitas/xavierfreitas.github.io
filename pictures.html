@@ -23,6 +23,9 @@
             <img src="images/yummyfood.jpg" alt="">
             <img src="images/pretenddeadinsnow.jpg" alt="">
         </div>
-        <button id="back-button"><a href="index.html">CLICK ME TO GO BACK!</a></button>
+        <!-- REFERENCE: https://stackoverflow.com/questions/24837102/the-element-button-must-not-appear-as-a-descendant-of-the-a-element -->
+        <form action="index.html" method="get">
+            <button>CLICK ME TO GO BACK!</button>
+        </form>
   </body>
 </html>
