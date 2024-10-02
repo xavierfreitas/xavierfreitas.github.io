@@ -1,3 +1,23 @@
+/*******
+File: pacific.css
+GUI Assignment: HW2
+Description: This is the CSS file I used to fully style the index.html
+page so that it would fit all of the requirements asked in the assignment
+Contact Email: Xavier_Freitas@student.uml
+Xavier Freitas, UMass Lowell Computer Science, xfreitas@cs.uml.edu
+Copyright (c) 2024 by Xavier. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by XF on October 2, 2024 at 7:10PM
+*******/
+
+/**
+VAGUELY USED SOURCES: 
+https://www.w3schools.com/cssref/pr_background-image.php
+https://www.w3schools.com/cssref/css3_pr_text-overflow.php
+https://www.w3schools.com/cssref/pr_grid-auto-rows.php
+https://www.w3schools.com/css/css_list.asp
+**/
+
 header, hgroup, nav, footer, figure, figcaption, aside, section, article {
 	display: block;
 }
@@ -28,7 +48,13 @@ dt {
 
 /* MY WORK STARTS HERE */
 
-/* GRID DISPLAY */
+/* GRID DISPLAY AREA */
+/* 
+made wrapper area all into a grid
+so i could easily lay out the elements
+in their respective places
+*/
+/* SOURCE: https://www.youtube.com/watch?v=EiNiSFIPIQE */
 #wrapper {
 	background-color: #00569f;
 	width: 80%;
@@ -40,13 +66,6 @@ dt {
 	grid-template-rows: 70px auto 60px;
 	grid-auto-columns: 0px;
 	grid-auto-rows: 0px;
-	/*
-	grid-template-areas: 
-		"header header header header"
-		"nav div div div"
-		;
-	*/
-	
 }
 
 /* header display */
@@ -68,6 +87,7 @@ nav {
 	background-color: #84c5e6;
 }
 
+/* navigation bar list item formatting */
 nav ul li {
 	display:flex;
 	margin-left: 10px;
@@ -83,10 +103,12 @@ nav ul {
 	padding-left: 5px;
 }
 
+/* white hover color for the nav bar items */
 nav a:hover {
 	color: #FFFFFF;
 }
 
+/* formatting the nav bar text */
 li > a {
 	color: black;
 	font-size: 20px;
@@ -116,6 +138,7 @@ footer {
 	display: inline-block;
 }
 
+/* made image float left so that text would wrap around it */
 #content img {
 	float: left;
 	margin-right: 20px;
@@ -139,6 +162,7 @@ footer {
 	margin-bottom: 0px;
 }
 
+/* styling for the "Pacific Trails Resort" texts */
 .resort {
 	color: #617995;
 	font-size: larger;
