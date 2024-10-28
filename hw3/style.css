@@ -1,0 +1,56 @@
+/*******
+File: style.css
+GUI Assignment: HW3
+Description: This is the CSS file for styling my times-table web page
+Contact Email: Xavier_Freitas@student.uml
+Xavier Freitas, UMass Lowell Computer Science, xfreitas@cs.uml.edu
+Copyright (c) 2024 by Xavier. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by XF on October 27, 2024 at 9:50PM
+*******/
+
+#wrapper {
+    background-color: lightgreen;
+    border: 2px solid grey;
+    margin: 30px 30px;
+    border-radius: 20px;
+    padding: 20px; /* Add padding for better spacing */
+}
+
+#wrapper > p {
+    background-color: darkgreen;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    font-size: 3em;
+    margin: 0px 0px 20px 0px;
+    border-bottom: 3px solid black;
+    padding: auto 10px;
+}
+
+#information {
+    text-align: center; /* Center inline-block children */
+    background-color: grey;
+    border-radius: 20px;
+}
+
+#information > p {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px auto 0px auto;
+    color: black;
+    font-size: 2em;
+}
+
+#information > p:nth-child(2) {
+    margin: 0px auto 20px auto;
+    font-size: 1.5em;
+}
+
+#submit_button {
+    margin: 20px 0px 0px 0px;
+}
+
+#forms {
+    margin: 25px auto;
+}

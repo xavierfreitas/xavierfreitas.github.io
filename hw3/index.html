@@ -1,0 +1,60 @@
+<!--
+File: index.html
+GUI Assignment: HW3
+Description: This is the index.html home page for the HW3 assignment
+where I will be using JS to make an interactive times-table
+Contact Email: Xavier_Freitas@student.uml
+Xavier Freitas, UMass Lowell Computer Science, xfreitas@cs.uml.edu
+Copyright (c) 2024 by Xavier. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by XF on October 27, 2024 at 9:50PM
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Interactive Times Table</title>
+    <meta charset="utf-8">
+    <link href="style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="wrapper" class="container">
+        <p class="col-12">Interactive Multiplication Table!</p>
+        <div id="information" class="container col-10">
+            <p class="col-12">How do I use the Multiplication table?<br></p>
+            <p>Input your minimum column and row value, then input your maximum for both as well!</p>
+        </div>
+        <div id="forms" class="container">
+            <form>
+                <div class="row form-row">
+                    <div class="col">
+                        <label for="minColNum">Min Col Num</label>
+                        <input type="number" id="minColNum" class="form-control" required>
+                    </div>
+                    <div class="col">
+                        <label for="minRowNum">Min Row Num</label>
+                        <input type="number" id="minRowNum" class="form-control" required>
+                    </div>
+                </div>
+                <div class="row form-row">
+                    <div class="col">
+                        <label for="maxColNum">Max Col Num</label>
+                        <input type="number" id="maxColNum" class="form-control" required>
+                    </div>
+                    <div class="col">
+                        <label for="maxRowNum">Max Row Num</label>
+                        <input type="number" id="maxRowNum" class="form-control" required>
+                    </div>
+                </div>
+                <button id="submit_button" type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+        <div id="output" class="container mt-3">
+            <p id="result" class="alert alert-info"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
