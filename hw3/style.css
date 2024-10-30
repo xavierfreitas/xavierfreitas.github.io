@@ -12,7 +12,7 @@ updated by XF on October 27, 2024 at 9:50PM
 #wrapper {
     background-color: lightgreen;
     border: 2px solid grey;
-    margin: 30px 30px;
+    margin: 30px auto;
     border-radius: 20px;
     padding: 20px; /* Add padding for better spacing */
 }
@@ -53,4 +53,15 @@ updated by XF on October 27, 2024 at 9:50PM
 
 #forms {
     margin: 25px auto;
+}
+
+#textresult {
+    text-align: center;
+}
+
+#timestable {
+    background-color: aliceblue;
+    max-height: 500px;
+    overflow-y: auto;  /* Enable vertical scrolling if necessary */
+    overflow-x: auto;  /* Enable horizontal scrolling */
 }

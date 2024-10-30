@@ -24,7 +24,9 @@ updated by XF on October 27, 2024 at 9:50PM
         <p class="col-12">Interactive Multiplication Table!</p>
         <div id="information" class="container col-10">
             <p class="col-12">How do I use the Multiplication table?<br></p>
-            <p>Input your minimum column and row value, then input your maximum for both as well!</p>
+            <p>Input your minimum column and row values, then input your maximum for both as well.<br>That's it!</p>
+            <!-- Source: https://www.geeksforgeeks.org/how-to-insert-spaces-tabs-in-text-using-html-css/ -->
+            <p>Min value: -50 &emsp; Max value: 50</p>
         </div>
         <div id="forms" class="container">
             <form>
@@ -51,8 +53,9 @@ updated by XF on October 27, 2024 at 9:50PM
                 <button id="submit_button" type="submit" class="btn btn-primary">Submit</button>
             </form>
         </div>
-        <div id="output" class="container mt-3">
-            <p id="result" class="alert alert-info"></p>
+        <div id="output" class="container">
+            <p id="textresult" class="alert alert-dark">Awaiting input! </p>
+            <div id="timestable" class="container"></div>
         </div>
     </div>
     <script src="script.js"></script>
