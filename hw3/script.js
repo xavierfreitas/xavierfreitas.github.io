@@ -9,13 +9,14 @@ excerpted for educational purposes with credit to the author.
 updated by XF on October 27, 2024 at 9:50PM
 **/
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
     const form = document.querySelector("form");
     const resultParagraph = document.getElementById("textresult");
     const tableContainer = document.getElementById("timestable");
 
-    form.addEventListener("submit", function (event) {
-        // Prevent default form submission
+    form.addEventListener("submit", function(event) {
+        // Prevents the form from submitting by refreshing the page
+        // Source: https://www.w3schools.com/jsref/event_preventdefault.asp
         event.preventDefault();
 
         // Get values from the form input fields
@@ -28,10 +29,10 @@ document.addEventListener("DOMContentLoaded", function () {
         // Create the default output string
         let output = "Awaiting input!";
 
-        // Source for changing class names
+        // Source for editing/changing class names
         // Source: https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
         // Check for invalid boundary ranges
-        if((minColNum < -50 || minColNum > 50) || (minRowNum < -50 || minRowNum > 50) ||
+        if ((minColNum < -50 || minColNum > 50) || (minRowNum < -50 || minRowNum > 50) ||
         (maxColNum < -50 || maxColNum > 50) || (maxRowNum < -50 || maxRowNum > 50)) {
             // Create output string for the user
             output = "Invalid range for one or more of the outputs! Minimum value is -50 and maximum value is 50.";
@@ -65,25 +66,34 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// makeTable Function: the function that is executed in order to fully
+// develop and update the interactive times table
+// Append Child Source
+// Source: https://www.w3schools.com/jsref/met_node_appendchild.asp
+// JS change CSS Style Source
+// Source: https://www.w3schools.com/jsref/prop_html_style.asp
 function makeTable(minCol, minRow, maxCol, maxRow, tableElement) {
     // Creating the table and adding classes
     const table = document.createElement("table");
     table.classList.add("table", "table-bordered", "table-striped"); // Bootstrap table classes added
+    table.style.textAlign = "center";
     
     // Create thead and tbody elements
     const thead = document.createElement("thead");
     const tbody = document.createElement("tbody");
 
-    // Create the header row
+    // Create the header row and top-left-most element
     const headerRow = document.createElement("tr");
     let topleft = document.createElement("th");
     topleft.textContent = "X"
+    topleft.style.border = "1px solid #000000";
     headerRow.appendChild(topleft); // Top-left corner will just be "X"
 
     // Add column headers
     for (let col = minCol; col <= maxCol; col++) {
         const th = document.createElement("th");
         th.textContent = col; // Set colum headers
+        th.style.border = "1px solid #000000";
         headerRow.appendChild(th);
     }
     thead.appendChild(headerRow); // Add top header row to table head
@@ -95,6 +105,7 @@ function makeTable(minCol, minRow, maxCol, maxRow, tableElement) {
         // Add row headers
         const rowHeader = document.createElement("th");
         rowHeader.textContent = row; // Set row headers
+        rowHeader.style.border = "1px solid #000000";
         tr.appendChild(rowHeader);
 
         // Add cells for multiplication
