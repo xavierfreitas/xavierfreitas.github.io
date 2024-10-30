@@ -64,3 +64,7 @@ updated by XF on October 27, 2024 at 9:50PM
     overflow-y: auto;  /* Enable vertical scrolling if necessary */
     overflow-x: auto;  /* Enable horizontal scrolling */
 }
+
+th, tr, td {
+    text-align: center;
+}

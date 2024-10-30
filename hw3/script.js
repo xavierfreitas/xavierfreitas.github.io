@@ -76,7 +76,6 @@ function makeTable(minCol, minRow, maxCol, maxRow, tableElement) {
     // Creating the table and adding classes
     const table = document.createElement("table");
     table.classList.add("table", "table-bordered", "table-striped"); // Bootstrap table classes added
-    table.style.textAlign = "center";
     
     // Create thead and tbody elements
     const thead = document.createElement("thead");
