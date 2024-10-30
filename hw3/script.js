@@ -66,6 +66,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+
 // makeTable Function: the function that is executed in order to fully
 // develop and update the interactive times table
 // Append Child Source
@@ -86,6 +87,7 @@ function makeTable(minCol, minRow, maxCol, maxRow, tableElement) {
     let topleft = document.createElement("th");
     topleft.textContent = "X"
     topleft.style.border = "1px solid #000000";
+    topleft.style.backgroundColor = "darkgray";
     headerRow.appendChild(topleft); // Top-left corner will just be "X"
 
     // Add column headers
@@ -93,6 +95,8 @@ function makeTable(minCol, minRow, maxCol, maxRow, tableElement) {
         const th = document.createElement("th");
         th.textContent = col; // Set colum headers
         th.style.border = "1px solid #000000";
+        th.style.backgroundColor = "darkgray";
+        th.classList.add("top-header"); // To make header row fixed
         headerRow.appendChild(th);
     }
     thead.appendChild(headerRow); // Add top header row to table head
@@ -105,6 +109,8 @@ function makeTable(minCol, minRow, maxCol, maxRow, tableElement) {
         const rowHeader = document.createElement("th");
         rowHeader.textContent = row; // Set row headers
         rowHeader.style.border = "1px solid #000000";
+        rowHeader.style.backgroundColor = "darkgray";
+        rowHeader.classList.add("left-header"); // To make 1st column fixed
         tr.appendChild(rowHeader);
 
         // Add cells for multiplication

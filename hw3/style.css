@@ -60,6 +60,8 @@ updated by XF on October 27, 2024 at 9:50PM
 }
 
 #timestable {
+    padding: 0;
+    margin: 0 auto;
     max-height: 500px;
     overflow-y: auto;  /* Enable vertical scrolling if necessary */
     overflow-x: auto;  /* Enable horizontal scrolling */
@@ -67,4 +69,18 @@ updated by XF on October 27, 2024 at 9:50PM
 
 th, tr, td {
     text-align: center;
+}
+
+/* Style for top header row to make it fixed */
+th.top-header {
+    position: sticky;
+    top: 0;
+    z-index: 10; /* Ensure it stays above other cells */
+}
+
+/* Style for 1st column to make it fixed */
+th.left-header {
+    position: sticky;
+    left: 0;
+    z-index: 9;
 }
