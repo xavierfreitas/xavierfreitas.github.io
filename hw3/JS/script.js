@@ -6,7 +6,7 @@ Contact Email: Xavier_Freitas@student.uml
 Xavier Freitas, UMass Lowell Computer Science, xfreitas@cs.uml.edu
 Copyright (c) 2024 by Xavier. All rights reserved. May be freely copied or
 excerpted for educational purposes with credit to the author.
-updated by XF on October 27, 2024 at 9:50PM
+updated by XF on October 30, 2024 at 8:30PM
 **/
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
             // Create output string for the user
             output = "Invalid range for one or more of the outputs! Minimum value is -50 and maximum value is 50.";
             
+            // changing the alert type for the awaiting/error/success message
             resultParagraph.className = "";
             resultParagraph.classList.add("alert", "alert-danger");
 
@@ -48,7 +49,6 @@ document.addEventListener("DOMContentLoaded", function() {
             resultParagraph.className = "";
             resultParagraph.classList.add("alert", "alert-danger");
 
-            // Clear any previously existing table
             tableContainer.innerHTML = "";
         } else {
             output = "Success! Bellow is your table:"
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
             resultParagraph.className = "";
             resultParagraph.classList.add("alert", "alert-success");
 
-            // Clear any previously existing table
+            // Clear any previously existing table, then make table
             tableContainer.innerHTML = "";
             makeTable(minColNum, minRowNum, maxColNum, maxRowNum, tableContainer);
         }
@@ -78,17 +78,17 @@ function makeTable(minCol, minRow, maxCol, maxRow, tableElement) {
     const table = document.createElement("table");
     table.classList.add("table", "table-bordered", "table-striped"); // Bootstrap table classes added
     
-    // Create thead and tbody elements
+    // Creating thead and tbody elements
     const thead = document.createElement("thead");
     const tbody = document.createElement("tbody");
 
-    // Create the header row and top-left-most element
+    // Creating the header row and top-left-most element
     const headerRow = document.createElement("tr");
     let topleft = document.createElement("th");
     topleft.textContent = "X"
     topleft.style.border = "1px solid #000000";
     topleft.style.backgroundColor = "darkgray";
-    headerRow.appendChild(topleft); // Top-left corner will just be "X"
+    headerRow.appendChild(topleft); // Top-left corner will just be "X" (for multiplication)
 
     // Add column headers
     for (let col = minCol; col <= maxCol; col++) {
@@ -96,7 +96,7 @@ function makeTable(minCol, minRow, maxCol, maxRow, tableElement) {
         th.textContent = col; // Set colum headers
         th.style.border = "1px solid #000000";
         th.style.backgroundColor = "darkgray";
-        th.classList.add("top-header"); // To make header row fixed
+        th.classList.add("top-header"); // Class to make header row fixed
         headerRow.appendChild(th);
     }
     thead.appendChild(headerRow); // Add top header row to table head
@@ -110,7 +110,7 @@ function makeTable(minCol, minRow, maxCol, maxRow, tableElement) {
         rowHeader.textContent = row; // Set row headers
         rowHeader.style.border = "1px solid #000000";
         rowHeader.style.backgroundColor = "darkgray";
-        rowHeader.classList.add("left-header"); // To make 1st column fixed
+        rowHeader.classList.add("left-header"); // Class to make 1st column fixed
         tr.appendChild(rowHeader);
 
         // Add cells for multiplication
