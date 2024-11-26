@@ -1,13 +1,13 @@
 <!--
 File: index.html
-GUI Assignment: HW3
-Description: This is the index.html home page for the HW3 assignment
-where I will be using JS to make an interactive times-table
+GUI Assignment: HW4
+Description: This is the index.html home page for the HW4 assignment
+where the HTML for the interactive times table is located.
 Contact Email: Xavier_Freitas@student.uml
 Xavier Freitas, UMass Lowell Computer Science, xfreitas@cs.uml.edu
 Copyright (c) 2024 by Xavier. All rights reserved. May be freely copied or
 excerpted for educational purposes with credit to the author.
-updated by XF on October 29, 2024 at 6:30PM
+updated by XF on November 26, 2024 at 6:30PM
 -->
 
 <!DOCTYPE html>
@@ -37,21 +37,21 @@ updated by XF on October 29, 2024 at 6:30PM
                 <div class="row form-row">
                     <div class="col">
                         <label for="minColNum">Min Col Num</label>
-                        <input type="number" id="minColNum" class="form-control" required>
+                        <input type="number" id="minColNum" name="minColNum" class="form-control" required>
                     </div>
                     <div class="col">
                         <label for="minRowNum">Min Row Num</label>
-                        <input type="number" id="minRowNum" class="form-control" required>
+                        <input type="number" id="minRowNum" name="minRowNum" class="form-control" required>
                     </div>
                 </div>
                 <div class="row form-row">
                     <div class="col">
                         <label for="maxColNum">Max Col Num</label>
-                        <input type="number" id="maxColNum" class="form-control" required>
+                        <input type="number" id="maxColNum" name="maxColNum" class="form-control" required>
                     </div>
                     <div class="col">
                         <label for="maxRowNum">Max Row Num</label>
-                        <input type="number" id="maxRowNum" class="form-control" required>
+                        <input type="number" id="maxRowNum" name="maxRowNum" class="form-control" required>
                     </div>
                 </div>
                 <button id="submit_button" type="submit" class="btn btn-primary">Submit</button>
@@ -65,8 +65,8 @@ updated by XF on October 29, 2024 at 6:30PM
             <div id="timestable" class="container"></div>
         </div>
     </div>
-    <script src="JS/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.21.0/dist/jquery.validate.min.js"></script>
+    <script src="JS/script.js"></script>
 </body>
 </html>

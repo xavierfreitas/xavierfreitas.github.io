@@ -1,12 +1,12 @@
 /*******
 File: style.css
-GUI Assignment: HW3
+GUI Assignment: HW4
 Description: This is the CSS file for styling my times-table web page
 Contact Email: Xavier_Freitas@student.uml
 Xavier Freitas, UMass Lowell Computer Science, xfreitas@cs.uml.edu
 Copyright (c) 2024 by Xavier. All rights reserved. May be freely copied or
 excerpted for educational purposes with credit to the author.
-updated by XF on October 30, 2024 at 8:25PM
+updated by XF on November 26, 2024 at 6:30PM
 *******/
 
 /* styling for the wrapper alongside making it have round corners */
@@ -97,4 +97,10 @@ th.left-header {
     position: sticky;
     left: 0;
     z-index: 9; /* to make sure it displays on top of the other cells */
+}
+
+/* added to make all JQuery validator errors appear in red color + bold */
+form .error {
+    color: #ff0000;
+    font-weight: bold;
 }
