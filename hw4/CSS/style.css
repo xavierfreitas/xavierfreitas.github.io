@@ -1,0 +1,100 @@
+/*******
+File: style.css
+GUI Assignment: HW3
+Description: This is the CSS file for styling my times-table web page
+Contact Email: Xavier_Freitas@student.uml
+Xavier Freitas, UMass Lowell Computer Science, xfreitas@cs.uml.edu
+Copyright (c) 2024 by Xavier. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by XF on October 30, 2024 at 8:25PM
+*******/
+
+/* styling for the wrapper alongside making it have round corners */
+#wrapper {
+    background-color: lightgreen;
+    border: 2px solid grey;
+    margin: 30px auto;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+/* styling for the big "Interactive Mult Table" text */
+#wrapper > p {
+    background-color: darkgreen;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    font-size: 3em;
+    margin: 0px 0px 20px 0px;
+    border-bottom: 3px solid black;
+    padding: auto 10px;
+}
+
+/* styling for the container that has the information 
+that describes to the user how to interact with the webpage */
+#information {
+    text-align: center;
+    background-color: grey;
+    border-radius: 20px;
+}
+
+/* styling for the information paragraphs */
+#information > p {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px auto 0px auto;
+    color: black;
+    font-size: 2em;
+}
+
+/* making the second paragraph slightly smaller so that the
+first one stands out more to the reader */
+#information > p:nth-child(2) {
+    margin: 0px auto 20px auto;
+    font-size: 1.5em;
+}
+
+/* fixing the submit button spacing to line it up nicely */
+#submit_button {
+    margin: 20px 0px 0px 0px;
+}
+
+/* styling the spacing for the submission forms */
+#forms {
+    margin: 25px auto;
+}
+
+/* centering text for the awaiting/error/success message */
+#textresult {
+    text-align: center;
+}
+
+/* styling for the times table, along with the overflow
+values x & y so that the container becomes scrollable 
+if it ends up being big enough */
+#timestable {
+    padding: 0;
+    margin: 0 auto;
+    max-height: 500px;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+/* centering the text inside each header/row/cell in the times table */
+th, tr, td {
+    text-align: center;
+}
+
+/* Style for top header row to make it fixed */
+th.top-header {
+    position: sticky;
+    top: 0;
+    z-index: 10; /* to make sure it displays on top of the other cells */
+}
+
+/* Style for 1st column to make it fixed */
+th.left-header {
+    position: sticky;
+    left: 0;
+    z-index: 9; /* to make sure it displays on top of the other cells */
+}
