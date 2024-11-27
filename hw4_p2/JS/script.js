@@ -8,7 +8,7 @@ Contact Email: Xavier_Freitas@student.uml
 Xavier Freitas, UMass Lowell Computer Science, xfreitas@cs.uml.edu
 Copyright (c) 2024 by Xavier. All rights reserved. May be freely copied or
 excerpted for educational purposes with credit to the author.
-updated by XF on November 26, 2024 at 6:30PM
+updated by XF on November 27, 2024 at 12:30PM
 **/
 
 $(document).ready(function () {
@@ -97,8 +97,7 @@ $(document).ready(function () {
     // Adding method to the validator so it can also check if
     // the min is greater than max, as that was one of my conditions
     // in the previous assignment, hw3
-    // Source:
-    // https://jqueryvalidation.org/jQuery.validator.addMethod/
+    // Source: https://jqueryvalidation.org/jQuery.validator.addMethod/
     $.validator.addMethod("minLessThanMax", function (value, element, params) {
         const minVal = parseInt($(params.minField).val());
         const maxVal = parseInt(value);
@@ -107,8 +106,7 @@ $(document).ready(function () {
 
     // Validating the #timesTableForm element, allowing for the use of the
     // JQuery validator instead of manually checking with vanilla JS
-    // Source:
-    // https://www.sitepoint.com/basic-jquery-form-validation-tutorial/
+    // Source: https://www.sitepoint.com/basic-jquery-form-validation-tutorial/
     $("#timesTableForm").validate({
         rules: {
             minColNum: {
@@ -166,6 +164,7 @@ $(document).ready(function () {
     
             // Add the tab to the tab list with a delete button and check box
             // for being able to delete a singular tab or multiple checked tabs
+            // Source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
             const tabHTML = `
             <li id="tab-li-${tabCounter}">
                 <input type="checkbox" class="tab-checkbox" data-tab-id="${tabID}"> 
@@ -204,7 +203,7 @@ $(document).ready(function () {
         $(`#tabs li a[href='#${tabNum}']`).parent().remove(); // Remove tab
         $(`#${tabNum}`).remove(); // Remove content
 
-        // Refresh tabs to update UI
+        // Refresh the tabs after deleting
         $("#tabs-container").tabs("refresh");
     });
 
@@ -299,7 +298,7 @@ function updateTable() {
     const maxRowNum = parseInt($("#maxRowNum").val());
 
     // Regenerate the table with the current values
-    // have to access "[0]" or else it would be the JQuery object not the DOM one
+    // Have to access "[0]" or else it would be the JQuery object not the DOM one
     const tablePreview = $("#previewTable")[0];
     tablePreview.innerHTML = ""; // Clear the previous table
     makeTable(minColNum, minRowNum, maxColNum, maxRowNum, tablePreview);

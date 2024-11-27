@@ -6,7 +6,7 @@ Contact Email: Xavier_Freitas@student.uml
 Xavier Freitas, UMass Lowell Computer Science, xfreitas@cs.uml.edu
 Copyright (c) 2024 by Xavier. All rights reserved. May be freely copied or
 excerpted for educational purposes with credit to the author.
-updated by XF on November 26, 2024 at 6:30PM
+updated by XF on November 27, 2024 at 12:15PM
 *******/
 
 /* styling for the wrapper alongside making it have round corners */
@@ -104,16 +104,18 @@ form .error {
     color: #ff0000;
     font-weight: bold;
 }
-
+/* added some space above the sliders to give them room to breathe */
 .sliders {
     margin: 10px auto;
 }
 
+/* Slightly bigger text to stand out */
 #previewText {
     text-align: center;
     font-size: 125%;
 }
 
+/* formatting for the preview table that pops up once valid parameters are input */
 #previewTable {
     position: absolute;
     padding: 0;
@@ -124,12 +126,14 @@ form .error {
     overflow-x: auto;
 }
 
+/* fixing up the positioning to make it fit better */
 #previewDiv {
     transform: translateY(-150px);
     display: flex;
     justify-content: center;
 }
 
+/* fixed spacing on the delete multiple tabs button */
 #delete-selected-tabs {
     margin: 5px auto 20px auto;
 }
