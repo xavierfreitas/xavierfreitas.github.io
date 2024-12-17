@@ -1,0 +1,59 @@
+/*******
+File: style.css
+GUI Assignment: HW4
+Description: This is the CSS file for styling my times-table web page
+Contact Email: Xavier_Freitas@student.uml
+Xavier Freitas, UMass Lowell Computer Science, xfreitas@cs.uml.edu
+Copyright (c) 2024 by Xavier. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by XF on December 17, 2024 at 12:15PM
+*******/
+
+/* styling for the wrapper alongside making it have round corners */
+#wrapper {
+    background-color: rgb(255, 196, 0);
+    border: 2px solid grey;
+    margin: 30px auto;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+/* styling for the big "Interactive Mult Table" text */
+#wrapper > p {
+    background-color: rgb(163, 112, 1);
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    font-size: 3em;
+    margin: 0px 0px 20px 0px;
+    border-bottom: 3px solid black;
+    padding: auto 10px;
+}
+
+/* styling for the container that has the information 
+that describes to the user how to interact with the webpage */
+#information {
+    margin: 20px auto;
+    text-align: center;
+    background-color: grey;
+    border-radius: 20px;
+}
+
+/* styling for the information paragraphs */
+#information > p {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px auto 0px auto;
+    color: black;
+    font-size: 2em;
+}
+
+#how2play {
+    margin: 15px auto;
+}
+
+/* centering text for the awaiting/error/success message */
+#textresult {
+    text-align: center;
+    margin: 20px auto;
+}
