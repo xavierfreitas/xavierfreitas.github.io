@@ -13,7 +13,7 @@ updated by XF on December 17, 2024 at 11:45AM
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Shortened Scrabble Game</title>
+    <title>Mini Scrabble Game</title>
     <meta charset="utf-8">
     <link href="CSS/style.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -23,14 +23,28 @@ updated by XF on December 17, 2024 at 11:45AM
 <body>
     <!-- wrapper bootstrap container -->
     <div id="wrapper" class="container">
-        <p class="col-12">Shortened Scrabble Game!</p>
-        <!-- col 10 container for everything inside of the wrapper  -->
+        <p class="col-8">Mini Scrabble Game!</p>
         <div id="information" class="container col-6">
             <p id="how2play">How do I play?<br>meow meow meow</p>
         </div>
-        <div class="container">
-            <p id="textresult" class="col-4 alert alert-dark">Awaiting input! </p>
+        <div id="tileHolder" class="tile-holder">
+            <div class="tile" data-letter="A" style="background-image: url('images/tiles/Scrabble_Tile_A.jpg');"></div>
+            <div class="tile" data-letter="B" style="background-image: url('images/tiles/Scrabble_Tile_B.jpg');"></div>
+            <div class="tile" data-letter="C" style="background-image: url('images/tiles/Scrabble_Tile_C.jpg');"></div>
+            <div class="tile" data-letter="D" style="background-image: url('images/tiles/Scrabble_Tile_D.jpg');"></div>
+            <div class="tile" data-letter="E" style="background-image: url('images/tiles/Scrabble_Tile_E.jpg');"></div>
+            <div class="tile" data-letter="F" style="background-image: url('images/tiles/Scrabble_Tile_F.jpg');"></div>
+            <div class="tile" data-letter="G" style="background-image: url('images/tiles/Scrabble_Tile_G.jpg');"></div>
         </div>
+        <div id="board" class="board">
+            <div class="board-cell" id="cell-1"></div>
+            <div class="board-cell" id="cell-2"></div>
+            <div class="board-cell" id="cell-3"></div>
+            <div class="board-cell" id="cell-4"></div>
+            <div class="board-cell" id="cell-5"></div>
+            <div class="board-cell" id="cell-6"></div>
+            <div class="board-cell" id="cell-7"></div>
+        </div>        
     </div>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.21.0/dist/jquery.validate.min.js"></script>

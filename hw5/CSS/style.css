@@ -9,8 +9,16 @@ excerpted for educational purposes with credit to the author.
 updated by XF on December 17, 2024 at 12:15PM
 *******/
 
+/* filling out page space for wrapper, removing default margin/padding */
+html, body {
+    height: 95%;
+    margin: 0;
+    padding: 0;
+}
+
 /* styling for the wrapper alongside making it have round corners */
 #wrapper {
+    height: 80%;
     background-color: rgb(255, 196, 0);
     border: 2px solid grey;
     margin: 30px auto;
@@ -18,20 +26,19 @@ updated by XF on December 17, 2024 at 12:15PM
     padding: 20px;
 }
 
-/* styling for the big "Interactive Mult Table" text */
+/* styling for the big "Shortened Scrabble Game!" text */
 #wrapper > p {
     background-color: rgb(163, 112, 1);
     border-radius: 20px;
     color: white;
     text-align: center;
     font-size: 3em;
-    margin: 0px 0px 20px 0px;
+    margin: 10px auto;
     border-bottom: 3px solid black;
     padding: auto 10px;
 }
 
-/* styling for the container that has the information 
-that describes to the user how to interact with the webpage */
+/* styling for game information container */
 #information {
     margin: 20px auto;
     text-align: center;
@@ -52,8 +59,68 @@ that describes to the user how to interact with the webpage */
     margin: 15px auto;
 }
 
-/* centering text for the awaiting/error/success message */
-#textresult {
-    text-align: center;
+/* tile-holder should have the background image of the tile holder */
+#tileHolder {
+    display: flex;
+    gap: 5px;               /* space between tiles */
+    justify-content: space-evenly;  /* distribute tiles evenly */
     margin: 20px auto;
+    width: 640px;            /* set the width to match the tile holder image */
+    height: 182px;           /* set the height to match the tile holder image */
+    background-image: url('../images/graphics_data/scrabble_tile_holder.png'); /* tile holder image */
+    background-size: cover;  /* cover the entire tile-holder area */
+    background-position: center;  /* center the background image */
+    background-repeat: no-repeat;
+}
+
+/* context: individual tiles are 174x190 px */
+.tile {
+    width: 87px;  /* half of 174px */
+    height: 95px;  /* half of 190px */
+    background-size: 100%; /* scale the background image to tile size */
+    background-position: center;
+    background-color: #FFD700;
+    background-repeat: no-repeat;
+    text-align: center;
+    line-height: 190px;
+    font-size: 24px; /* adjust font size to fit */
+    border: 2px solid #8B4513;
+    border-radius: 5px;
+    cursor: grab;
+    z-index: 15;
+}
+
+#board {
+    display: flex;
+    width: 609px;
+    height: 95px;
+    margin: 20px auto;
+    background-image: url('../images/graphics_data/scrabble_board_short.png'); /* tile holder image */
+    background-repeat: no-repeat;
+    background-size: 100%;
+    justify-content: center; /* center the board */
+    position: relative;
+    z-index: 10;
+}
+
+.board-cell {
+    width: 87px;  /* half of 174px */
+    height: 95px;  /* half of 190px */
+    background-color: transparent; /* make cells initially invisible */
+    border: 2px solid transparent; /* keep border invisible initially */
+    background-size: 100%; /* scale the background image to tile size */
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1; /* lower z-index than board to hide under board image */
+    transition: background-color 0.3s ease, border 0.3s ease; /* smooth transition for hover effect */
+}
+
+/* when hovering over the actual tile, apply the effect to transparent cells */
+.board-cell.hovered {
+    background-color: rgba(0, 128, 0, 0.2); /* transparent green background */
+    border: 2px dashed #008000; /* green dashed border */
 }
