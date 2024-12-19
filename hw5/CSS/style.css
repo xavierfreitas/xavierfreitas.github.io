@@ -18,7 +18,8 @@ html, body {
 
 /* styling for the wrapper alongside making it have round corners */
 #wrapper {
-    height: 80%;
+    height: 100%;
+    min-width: 720px;
     background-color: rgb(255, 196, 0);
     border: 2px solid grey;
     margin: 30px auto;
@@ -42,7 +43,8 @@ html, body {
 #information {
     margin: 20px auto;
     text-align: center;
-    background-color: grey;
+    background-color: rgb(163, 112, 1);
+    border-bottom: 3px solid black;
     border-radius: 20px;
 }
 
@@ -50,8 +52,8 @@ html, body {
 #information > p {
     display: inline-block;
     padding: 10px 20px;
-    margin: 20px auto 0px auto;
-    color: black;
+    margin: 20px auto;
+    color: white;
     font-size: 2em;
 }
 
@@ -87,7 +89,7 @@ html, body {
     border: 2px solid #8B4513;
     border-radius: 5px;
     cursor: grab;
-    z-index: 15;
+    z-index: 100;
 }
 
 #board {
@@ -95,7 +97,7 @@ html, body {
     width: 609px;
     height: 95px;
     margin: 20px auto;
-    background-image: url('../images/graphics_data/scrabble_board_short.png'); /* tile holder image */
+    background-image: url('../images/graphics_data/scrabble_board_short_v2.png'); /* tile holder image */
     background-repeat: no-repeat;
     background-size: 100%;
     justify-content: center; /* center the board */
@@ -123,4 +125,55 @@ html, body {
 .board-cell.hovered {
     background-color: rgba(0, 128, 0, 0.2); /* transparent green background */
     border: 2px dashed #008000; /* green dashed border */
+}
+
+/* buttons container for layout */
+.buttons-container {
+    display: flex;
+    justify-content: center; /* center buttons horizontally */
+    gap: 20px; /* space between buttons */
+    margin: 20px auto;
+}
+
+/* general button styling */
+.game-button {
+    width: 150px; /* fixed width for buttons */
+    height: 50px; /* fixed height for buttons */
+    font-size: 1.2em; /* adjust font size */
+    font-weight: bold;
+    color: white;
+    border: 2px solid #555; /* darker border for buttons */
+    border-radius: 10px; /* rounded corners */
+    cursor: pointer; /* pointer cursor for hover */
+    transition: all 0.3s ease; /* smooth transition */
+}
+
+/* reset button styling */
+#resetButton {
+    background-color: #FF4500; /* orange-red for reset */
+    border-color: #CD3700;
+}
+
+#resetButton:hover {
+    background-color: #CD3700; /* darker orange on hover */
+    border-color: #8B2500;
+}
+
+/* submit button styling */
+#submitButton {
+    background-color: #32CD32; /* bright green for submit */
+    border-color: #228B22;
+}
+
+#submitButton:hover {
+    background-color: #228B22; /* darker green on hover */
+    border-color: #006400;
+}
+
+.score-display {
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 10px;
+    color: #333;
+    font-weight: bold;
 }
